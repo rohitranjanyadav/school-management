@@ -1,33 +1,53 @@
 # School Management API
 
 ## 🚀 Live API
-https://your-live-url
+
+Base URL:  
+https://school-management-goxh.onrender.com
+
+---
 
 ## 📌 Features
-- Add School
-- List Schools by proximity
+
+- Add a new school
+- List schools sorted by proximity to user location
+
+---
 
 ## 🛠 Tech Stack
+
 - Node.js
 - Express.js
 - MySQL
+- Railway / Render (Deployment)
+
+---
 
 ## 📍 API Endpoints
 
-### Add School
-POST /api/v1/addSchool
+### ➤ Add School
 
-### List Schools
-GET /api/v1/listSchools?latitude=xx&longitude=xx
+**POST** `/api/v1/addSchool`
 
-## 📏 Distance Calculation
-Uses Haversine formula.
+#### Request Body:
+```json
+{
+  "name": "Wiseland Secondary School",
+  "address": "Aadarsha, Bhaktapur",
+  "latitude": 27.667633,
+  "longitude": 85.434582
+}
 
-## 🧪 Postman Collection
-(Add link here)
-
-## ⚙️ Setup Instructions
-1. Clone repo
-2. npm install
-3. Add .env file
-4. npm start
+#### Request:
+```json
+{
+    "success": true,
+    "message": "School added successfully",
+    "data": {
+        "id": 4,
+        "name": "Wiseland Secondary School",
+        "address": "Aadarsha, Bhaktapur",
+        "latitude": 27.667633,
+        "longitude": 85.434582
+    }
+}
