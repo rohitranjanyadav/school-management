@@ -42,7 +42,7 @@ https://school-management-goxh.onrender.com
   "longitude": 85.434582
 }
 
-#### Request:
+#### Response:
 ```json
 {
     "success": true,
@@ -56,6 +56,35 @@ https://school-management-goxh.onrender.com
     }
 }
 
+#### List Schools
+**GET** `/api/v1/addSchool`
+## Example
+GET https://school-management-goxh.onrender.com/api/v1/listSchools?latitude=27.7&longitude=85.3
+
+#### Response:
+```json
+{
+    "success": true,
+    "message": "Schools fetched successfully",
+    "data": [
+        {
+            "id": 3,
+            "name": "White Rose English School",
+            "address": "Suryabinayak, Bhaktapur",
+            "latitude": 27.66493034362793,
+            "longitude": 85.43247985839844,
+            "distance": 0.18960285524011747
+        },
+        {
+            "id": 4,
+            "name": "Wiseland Secondary School",
+            "address": "Aadarsha, Bhaktapur",
+            "latitude": 27.667633056640625,
+            "longitude": 85.43458557128906,
+            "distance": 0.2903436541646677
+        }
+    ]
+}
 
 ## 🧪 Postman Collection
 
