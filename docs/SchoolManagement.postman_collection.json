@@ -1,0 +1,80 @@
+{
+  "info": {
+    "_postman_id": "749d9c78-ed69-49ba-abbb-b7517d0ba149",
+    "name": "SchoolManagement",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44449033",
+    "_collection_link": "https://go.postman.co/collection/44449033-749d9c78-ed69-49ba-abbb-b7517d0ba149?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Wiseland Secondary School\",\r\n  \"address\": \"Aadarsha, Bhaktapur\",\r\n  \"latitude\": 27.667633,\r\n  \"longitude\": 85.434582\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://school-management-goxh.onrender.com/api/v1/addSchool",
+          "protocol": "https",
+          "host": [
+            "school-management-goxh",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "addSchool"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://school-management-goxh.onrender.com/api/v1/listSchools?latitude=29.2&longitude=20.345",
+          "protocol": "https",
+          "host": [
+            "school-management-goxh",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "29.2"
+            },
+            {
+              "key": "longitude",
+              "value": "20.345"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
